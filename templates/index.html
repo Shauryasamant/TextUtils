@@ -24,6 +24,15 @@
    		text-align: center;
    		display: block;
 		}
+	    body {
+		    background-image: url('https://source.unsplash.com/random/?night');
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  background-size: cover;
+		 }
 	</style>
   </head>
   <body>
@@ -51,8 +60,11 @@
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
 </nav>
-
-
+<style>
+.jigsaw { background-color: white; border-radius: 15%; }
+	
+	
+</style>
 <div class="alert alert-success alert-dismissible fade show" role="alert">
   <strong>Welcome to TextUtils!</strong> You can do anything with your text here!
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -60,7 +72,7 @@
   </button>
 </div>
 
-
+<div class="jigsaw">
 <div class="container">
 
   <form action='/analyze' onsubmit="return validate()" method='post'> {% csrf_token %}
@@ -87,6 +99,10 @@
 	</p>
   </div>
 
+	
+	
+	
+	
 <div class="custom-control custom-switch">
   <input type="checkbox" name="removepunc" class="custom-control-input" id="customSwitch1">
   <label class="custom-control-label" for="customSwitch1">Remove Punctuations</label>
@@ -118,7 +134,7 @@
  <!-- Typed.js DONT TOUCH THIS! --> 
  <div id="typed-strings">
   </div>
-  
+  </div>
   <script>
      var typed = new Typed('#typed',{
                     strings:["You can do anything with your text here!","Enter your text here and let Text Utils do the magic!"],
